@@ -16,6 +16,16 @@ The output files are
 3. CodeBook.MD - This describes the functioning of the script in detail
 4. summary_by_subject_activity.txt - This file has the output data set as required for the project
 
+##Script Functionality
+
+The full functionality of the script is describe in CodeBook.MD
+
+In summary it loads all the data sets, cleanses ans attaches the column headings.
+It then conmbines the TEST and TRAINING data sets and merges in the Activity and Subject data into the data set.
+
+The required columns contaning mean and std deviation data are then selected out and these are melted into Key:Value pairs.
+
+For the final output the variables are summarized with the average of each variable for each activity and each subject.
 
 ##Project Requirement
 

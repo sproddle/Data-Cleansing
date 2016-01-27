@@ -73,5 +73,5 @@ final_melted <-melt(final_set_merged,id.vars=c("subject_id", "activity_id","set_
 ##final_melted %>% separate(variable, into=c("measure", "coordinate"),"\\(\\)-")%>% separate(measure, into=c("variable", "measure_type"),"-")
 
 ##5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-summary_by_subject_activity <-summarize(group_by(final_melted,subject_id, activity_type, variable), mean = mean(value), st_deviation = sd(value))
+summary_by_subject_activity <-summarize(group_by(final_melted,subject_id, activity_type, variable), mean = mean(value))
 write.table(summary_by_subject_activity,"summary_by_subject_activity.txt", row.names = FALSE)
