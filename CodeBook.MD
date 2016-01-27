@@ -170,5 +170,6 @@ The data could be tidied further by splitting out the measurement components int
 The final step creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 ```{r}
 ##5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-summary_by_subject_activity <-summarize(group_by(final_melted,subject_id, activity_type, variable), mean = mean(value), st_deviation = sd(value))
+summary_by_subject_activity <-summarize(group_by(final_melted,subject_id, activity_type, variable), mean = mean(value))
+write.table(summary_by_subject_activity,"summary_by_subject_activity.txt", row.names = FALSE)
 ```
